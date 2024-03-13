@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Plot
+    uniqueID: 2076630157
+    locked: 0
+  - name: Crop
+    uniqueID: 923527231
+    locked: 0

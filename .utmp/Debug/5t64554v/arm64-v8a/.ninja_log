@@ -1,0 +1,11 @@
+# ninja log v5
+36	159	7320469170525008	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	84d8dcbfe2aeeb8f
+160	280	7320469171375011	E:/Git Repos/Mobile-Game/Library/PramData/AndroidApplicationController/Cache/com.JustGames.FarmingGame/gradle-project/unityLibrary/build/intermediates/cxx/Debug/5t64554v/obj/arm64-v8a/libswappywrapper.so	63716937898a4fc5
+5	488	7320469173795010	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	95ccccf561f4c880
+24	495	7320469173860010	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e6094290e3c95932
+19	498	7320469173905008	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	97de750185be7087
+30	511	7320469174035009	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	265ebca98f9a29e8
+9	519	7320469174125012	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f062084eaa2de464
+0	584	7320469174755009	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	f6ef453b864d457d
+14	586	7320469174780007	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	33148d9caf42b5b4
+586	675	7320469175435014	E:/Git Repos/Mobile-Game/Library/PramData/AndroidApplicationController/Cache/com.JustGames.FarmingGame/gradle-project/unityLibrary/build/intermediates/cxx/Debug/5t64554v/obj/arm64-v8a/libgame.so	ad586618cbe2606b
