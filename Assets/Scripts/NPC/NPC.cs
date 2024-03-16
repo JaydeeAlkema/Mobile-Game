@@ -135,6 +135,12 @@ namespace MobileGame.NPC
 
 		private void InteractWithTarget()
 		{
+			if (target == null)
+			{
+				SetState(NPCState.Idle);
+				return;
+			}
+
 			target.Interact();
 			Plot plot = target as Plot;
 
