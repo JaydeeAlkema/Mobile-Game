@@ -22,6 +22,11 @@ namespace MobileGame.Crops
 		[BoxGroup("Base"), SerializeField, Required] private SpriteRenderer spriteRenderer = default;
 		[BoxGroup("Base"), SerializeField, Required] private Animator animator = default;
 
+		#region Properties
+		public bool IsWatered => isWatered;
+		public CropState CropState => cropState;
+		#endregion
+
 		#region Getters and Setters
 		private void SetState(CropState newState) => cropState = newState;
 		private void SetNextState()
@@ -76,7 +81,6 @@ namespace MobileGame.Crops
 			}
 		}
 
-		[Button]
 		public void Water()
 		{
 			if (isWatered)
@@ -94,7 +98,6 @@ namespace MobileGame.Crops
 			Destroy(gameObject);
 		}
 
-		[Button]
 		public void Interact()
 		{
 			switch (cropState)
@@ -111,6 +114,11 @@ namespace MobileGame.Crops
 				default:
 					throw new System.NotImplementedException($"{cropState} is not supported");
 			}
+		}
+
+		public Vector2 GetPosition()
+		{
+			return transform.position;
 		}
 	}
 }

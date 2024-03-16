@@ -95,6 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8992208644458351258}
+  - component: {fileID: 1823133978212943062}
   m_Layer: 0
   m_Name: Prefab_Plot_1
   m_TagString: Untagged
@@ -118,3 +119,19 @@ Transform:
   - {fileID: 8993337202452595307}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1823133978212943062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837639580669158728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6799ab9d0c7e5a04a911d4467a39555f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crop: {fileID: 0}
+  state: 0
+  isDebugging: 1
+  testCrop: {fileID: 7229629991328539544, guid: 1386b6975854f6c4e93d5ec07e31401c, type: 3}

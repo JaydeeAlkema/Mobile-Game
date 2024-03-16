@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9d5c0603739f2408403df7cd0d6ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growthTimeTillNextState: 10
+  growthTimeTillNextState: 30
   growthRate: 1
   growthTimer: 0
   cropState: 0

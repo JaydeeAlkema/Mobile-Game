@@ -1,4 +1,6 @@
+using MobileGame.Plots;
 using NaughtyAttributes;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace MobileGame.Managers
@@ -17,7 +19,13 @@ namespace MobileGame.Managers
 			}
 		}
 
-		[SerializeField, BoxGroup("Game Settings")] private int targetFrameRate = 60;
+		[BoxGroup("Game Settings"), SerializeField] private int targetFrameRate = 60;
+
+		[BoxGroup("Runtime"), SerializeField] private HashSet<Plot> plots = new();
+
+		#region Getters and Setters
+		public HashSet<Plot> Plots => plots;
+		#endregion
 
 		private void Awake()
 		{
@@ -25,6 +33,17 @@ namespace MobileGame.Managers
 
 			Application.targetFrameRate = targetFrameRate;
 		}
+
+		#region Plots
+		public void AddPlot(Plot plot)
+		{
+			plots.Add(plot);
+		}
+		public void RemovePlot(Plot plot)
+		{
+			plots.Remove(plot);
+		}
+		#endregion
 
 		private void SetInstance()
 		{
