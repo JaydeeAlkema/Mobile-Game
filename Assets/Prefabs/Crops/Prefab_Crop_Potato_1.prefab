@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9d5c0603739f2408403df7cd0d6ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growthTimeTillNextState: 30
+  growthTimeTillNextState: 5
   growthRate: 1
   growthTimer: 0
   cropState: 0
@@ -176,7 +176,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 923527231
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -5744499167534864388, guid: 905be46013ba0a24eaf6ef896b78e66c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -5,120 +5,121 @@ using UnityEngine;
 
 namespace MobileGame.Crops
 {
-	public class Crop : MonoBehaviour, IInteractable
-	{
-		[BoxGroup("Base"), SerializeField] private float growthTimeTillNextState = default;
-		[BoxGroup("Base"), SerializeField] private float growthRate = default;
-		[Space]
-		[BoxGroup("Base"), SerializeField, ProgressBar("growthTimer", "growthTimeTillNextState", EColor.Green)] private float growthTimer = 0;
-		[Space]
-		[BoxGroup("Base"), SerializeField] private CropState cropState = default;
-		[BoxGroup("Base"), SerializeField] private bool isWatered = default;
-		[Space]
-		[BoxGroup("Base"), SerializeField, Required] private Sprite seedSprite = default;
-		[BoxGroup("Base"), SerializeField, Required] private Sprite growingSprite = default;
-		[BoxGroup("Base"), SerializeField, Required] private Sprite grownSprite = default;
-		[Space]
-		[BoxGroup("Base"), SerializeField, Required] private SpriteRenderer spriteRenderer = default;
-		[BoxGroup("Base"), SerializeField, Required] private Animator animator = default;
+    public class Crop : MonoBehaviour, IInteractable
+    {
+        [BoxGroup("Base"), SerializeField] private float growthTimeTillNextState = default;
+        [BoxGroup("Base"), SerializeField] private float growthRate = default;
+        [Space]
+        [BoxGroup("Base"), SerializeField, ProgressBar("growthTimer", "growthTimeTillNextState", EColor.Green)] private float growthTimer = 0;
+        [Space]
+        [BoxGroup("Base"), SerializeField] private CropState cropState = default;
+        [BoxGroup("Base"), SerializeField] private bool isWatered = default;
+        [Space]
+        [BoxGroup("Base"), SerializeField, Required] private Sprite seedSprite = default;
+        [BoxGroup("Base"), SerializeField, Required] private Sprite growingSprite = default;
+        [BoxGroup("Base"), SerializeField, Required] private Sprite grownSprite = default;
+        [Space]
+        [BoxGroup("Base"), SerializeField, Required] private SpriteRenderer spriteRenderer = default;
+        [BoxGroup("Base"), SerializeField, Required] private Animator animator = default;
 
-		#region Properties
-		public bool IsWatered => isWatered;
-		public CropState CropState => cropState;
-		#endregion
+        #region Properties
+        public bool IsWatered => isWatered;
+        public CropState CropState => cropState;
+        #endregion
 
-		#region Getters and Setters
-		private void SetState(CropState newState) => cropState = newState;
-		private void SetNextState()
-		{
-			switch (cropState)
-			{
-				case CropState.Seed:
-					SetState(CropState.Growing);
-					SetSprite(growingSprite);
-					break;
+        #region Getters and Setters
+        private void SetState(CropState newState) => cropState = newState;
+        private void SetNextState()
+        {
+            switch (cropState)
+            {
+                case CropState.Seed:
+                    SetState(CropState.Growing);
+                    SetSprite(growingSprite);
+                    break;
 
-				case CropState.Growing:
-					SetState(CropState.Grown);
-					SetSprite(grownSprite);
-					break;
+                case CropState.Growing:
+                    SetState(CropState.Grown);
+                    SetSprite(grownSprite);
+                    break;
 
-				case CropState.Grown:
-					break;
+                case CropState.Grown:
+                    break;
 
-				default:
-					throw new System.NotImplementedException($"{cropState} is not supported");
-			}
-		}
-		private void SetSprite(Sprite newSprite) => spriteRenderer.sprite = newSprite;
-		#endregion
+                default:
+                    throw new System.NotImplementedException($"{cropState} is not supported");
+            }
+        }
+        private void SetSprite(Sprite newSprite) => spriteRenderer.sprite = newSprite;
+        #endregion
 
-		private void Start()
-		{
-			SetSprite(seedSprite);
-		}
+        private void Start()
+        {
+            SetSprite(seedSprite);
+        }
 
-		private void Update()
-		{
-			if (cropState == CropState.Grown)
-				return;
+        private void Update()
+        {
+            if (cropState == CropState.Grown)
+                return;
 
-			Grow();
-		}
+            Grow();
+        }
 
-		private void Grow()
-		{
-			if (!isWatered)
-				return;
+        private void Grow()
+        {
+            if (!isWatered)
+                return;
 
-			growthTimer += Time.deltaTime * growthRate;
-			if (growthTimer >= growthTimeTillNextState)
-			{
-				SetNextState();
-				animator.SetTrigger("Idle");
-				growthTimer = 0;
-				isWatered = false;
-			}
-		}
+            growthTimer += Time.deltaTime * growthRate;
+            if (growthTimer >= growthTimeTillNextState)
+            {
+                SetNextState();
+                animator.SetTrigger("Idle");
+                growthTimer = 0;
+                isWatered = false;
+            }
+        }
 
-		public void Water()
-		{
-			if (isWatered)
-				return;
+        public void Water()
+        {
+            if (isWatered)
+                return;
 
-			if (cropState == CropState.Grown)
-				return;
+            if (cropState == CropState.Grown)
+                return;
 
-			animator.SetTrigger("Interact");
-			isWatered = true;
-		}
+            animator.SetTrigger("Interact");
+            isWatered = true;
+        }
 
-		public void Harvest()
-		{
-			Destroy(gameObject);
-		}
+        public void Harvest()
+        {
+            SetState(CropState.Seed);
+            SetSprite(seedSprite);
+        }
 
-		public void Interact()
-		{
-			switch (cropState)
-			{
-				case CropState.Seed:
-				case CropState.Growing:
-					Water();
-					break;
+        public void Interact()
+        {
+            switch (cropState)
+            {
+                case CropState.Seed:
+                case CropState.Growing:
+                    Water();
+                    break;
 
-				case CropState.Grown:
-					Harvest();
-					break;
+                case CropState.Grown:
+                    Harvest();
+                    break;
 
-				default:
-					throw new System.NotImplementedException($"{cropState} is not supported");
-			}
-		}
+                default:
+                    throw new System.NotImplementedException($"{cropState} is not supported");
+            }
+        }
 
-		public Vector2 GetPosition()
-		{
-			return transform.position;
-		}
-	}
+        public Vector2 GetPosition()
+        {
+            return transform.position;
+        }
+    }
 }
