@@ -1,4 +1,4 @@
-namespace JustGames.FarmingGame.Interfaces
+namespace JG.FG.Interfaces
 {
     public interface IInteractable
     {

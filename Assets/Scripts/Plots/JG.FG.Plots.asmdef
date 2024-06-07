@@ -1,6 +1,6 @@
 {
-    "name": "JustGames.Plots",
-    "rootNamespace": "JustGames.Plots",
+    "name": "JG.FG.Plots",
+    "rootNamespace": "JG.FG.Plots",
     "references": [
         "GUID:d4899c4d93b415b4da1eed83e2447d93",
         "GUID:b6e651231a9b3484cb96e4cc3fabc5ba",

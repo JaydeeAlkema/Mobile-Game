@@ -1,6 +1,6 @@
 {
-    "name": "JustGames.Interfaces",
-    "rootNamespace": "JustGames.Interfaces",
+    "name": "JG.FG.Interfaces",
+    "rootNamespace": "JG.FG.Interfaces",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

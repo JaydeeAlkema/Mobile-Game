@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JustGames.FarmingGame.Plots
+namespace JG.FG.Plots
 {
     public class PlotHelper : MonoBehaviour
     {

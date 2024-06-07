@@ -1,4 +1,4 @@
-﻿namespace JustGames.FarmingGame.Plots
+﻿namespace JG.FG.Plots
 {
     public enum PlotState
     {

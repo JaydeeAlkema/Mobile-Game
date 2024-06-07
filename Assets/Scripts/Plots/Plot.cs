@@ -1,11 +1,11 @@
-using JustGames.FarmingGame.Crops;
-using JustGames.FarmingGame.Interfaces;
+using JG.FG.Crops;
+using JG.FG.Interfaces;
 using NaughtyAttributes;
 using System.Text;
 using TMPro;
 using UnityEngine;
 
-namespace JustGames.FarmingGame.Plots
+namespace JG.FG.Plots
 {
     public class Plot : MonoBehaviour, IInteractable
     {

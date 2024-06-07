@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace JustGames.FarmingGame.Crops
+namespace JG.FG.Crops
 {
     [CreateAssetMenu(fileName = "New Crop", menuName = "ScriptableObjects/Crop")]
     public class CropSO : ScriptableObject

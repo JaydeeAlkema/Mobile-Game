@@ -1,6 +1,6 @@
 {
-    "name": "JustGames.Crops",
-    "rootNamespace": "JustGames.Crops",
+    "name": "JG.FG.Crops",
+    "rootNamespace": "JG.FG.Crops",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
