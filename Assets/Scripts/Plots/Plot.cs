@@ -25,7 +25,7 @@ namespace JG.FG.Plots
 
         public CropState CropState { get => cropState; set => cropState = value; }
 
-        private void Start()
+        private void OnEnable()
         {
             Initialize();
         }
@@ -47,6 +47,7 @@ namespace JG.FG.Plots
             cropState = CropState.Growing;
             growthTimer = 0;
 
+            tempText.gameObject.SetActive(true);
             UpdateTempText();
         }
 

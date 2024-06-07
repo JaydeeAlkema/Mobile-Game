@@ -43,7 +43,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -71,8 +71,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""be4df32e-800b-4685-a81e-50b5ea0b2622"",
-                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
+                    ""id"": ""5cef0157-12d5-4a18-a355-3dbc3ee43ab3"",
+                    ""path"": ""<Touchscreen>/touch*/Press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
