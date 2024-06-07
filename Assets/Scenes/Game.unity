@@ -562,8 +562,9 @@ GameObject:
   - component: {fileID: 492015439}
   - component: {fileID: 492015441}
   - component: {fileID: 492015440}
+  - component: {fileID: 492015442}
   m_Layer: 5
-  m_Name: GoldAmountTex
+  m_Name: GoldAmount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,7 +609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold: 10M'
+  m_text: 'Gold: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 749b9069dc4742c5bfa5c74644049926, type: 2}
@@ -687,6 +688,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492015438}
   m_CullTransparentMesh: 1
+--- !u!114 &492015442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492015438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988f5c5bb63ac18478ebeec6ab70ee39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldText: {fileID: 492015440}
+  gold: {fileID: 11400000, guid: 885df19db0201564db84a10efa0c12da, type: 2}
 --- !u!1001 &500590890
 PrefabInstance:
   m_ObjectHideFlags: 0
