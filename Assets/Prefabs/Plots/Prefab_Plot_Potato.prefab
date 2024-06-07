@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 821662541628582719}
   - component: {fileID: 415775871684425639}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &821662541628582719
 Transform:
@@ -95,12 +95,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7393455523748983333}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7393455523748983333
 Transform:
@@ -130,12 +130,12 @@ GameObject:
   - component: {fileID: 90286076226964917}
   - component: {fileID: 8639513151575540004}
   - component: {fileID: 7506342811163658769}
-  m_Layer: 0
-  m_Name: Text (TMP)
+  m_Layer: 2
+  m_Name: Growing Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &90286076226964917
 RectTransform:
@@ -309,12 +309,12 @@ GameObject:
   - component: {fileID: 1884618974626735575}
   - component: {fileID: 552001908600585137}
   - component: {fileID: 8045927949341702302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Prefab_Plot_Potato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1884618974626735575
 Transform:
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6799ab9d0c7e5a04a911d4467a39555f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  cropState: 0
   crop: {fileID: 11400000, guid: e798dfb9373b05541bd2886df3a82710, type: 2}
   gold: {fileID: 11400000, guid: 885df19db0201564db84a10efa0c12da, type: 2}
   tempText: {fileID: 7506342811163658769}
@@ -405,12 +405,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7805822101683042925}
   - component: {fileID: 6379537173823104229}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7805822101683042925
 Transform:
