@@ -1,5 +1,6 @@
 using JG.FG.Crops;
 using JG.FG.Interfaces;
+using JG.FG.ScriptableObjects;
 using NaughtyAttributes;
 using System.Text;
 using TMPro;
@@ -9,12 +10,15 @@ namespace JG.FG.Plots
 {
     public class Plot : MonoBehaviour, IInteractable
     {
+        [BoxGroup("Runtime")]
         [SerializeField] private PlotState state;
 
-        [Space]
+        [BoxGroup("Reference")]
         [SerializeField] private CropSO crop;
+        [BoxGroup("Reference")]
+        [SerializeField] private IntSO gold;
 
-        [Space]
+        [BoxGroup("--- TEMP ---")]
         [SerializeField] private TextMeshPro tempText;
 
         private float growthTimer;
@@ -71,6 +75,8 @@ namespace JG.FG.Plots
                 return;
 
             state = PlotState.Growing;
+
+            gold.Add(crop.GoldWorth);
         }
 
         private void UpdateTempText()

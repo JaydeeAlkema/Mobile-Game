@@ -307,8 +307,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1884618974626735575}
-  - component: {fileID: 8045927949341702302}
   - component: {fileID: 552001908600585137}
+  - component: {fileID: 8045927949341702302}
   m_Layer: 0
   m_Name: Prefab_Plot_Potato
   m_TagString: Untagged
@@ -333,21 +333,6 @@ Transform:
   - {fileID: 90286076226964917}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8045927949341702302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7641561132504348900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6799ab9d0c7e5a04a911d4467a39555f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  crop: {fileID: 11400000, guid: e798dfb9373b05541bd2886df3a82710, type: 2}
-  tempText: {fileID: 7506342811163658769}
 --- !u!61 &552001908600585137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -394,6 +379,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8045927949341702302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7641561132504348900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6799ab9d0c7e5a04a911d4467a39555f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  crop: {fileID: 11400000, guid: e798dfb9373b05541bd2886df3a82710, type: 2}
+  gold: {fileID: 11400000, guid: 885df19db0201564db84a10efa0c12da, type: 2}
+  tempText: {fileID: 7506342811163658769}
 --- !u!1 &8336355764442249527
 GameObject:
   m_ObjectHideFlags: 0

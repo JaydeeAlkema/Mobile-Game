@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9d5c0603739f2408403df7cd0d6ace, type: 3}
   m_Name: Crop_PotatoSO
   m_EditorClassIdentifier: 
+  <Icon>k__BackingField: {fileID: 0}
   <Name>k__BackingField: Potato
   <GrowthTime>k__BackingField: 10
-  <HarvestAmount>k__BackingField: 1
+  <GoldWorth>k__BackingField: 15
