@@ -1,4 +1,5 @@
-﻿using NaughtyAttributes;
+﻿using JG.FG.Crops;
+using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +20,7 @@ namespace JG.FG.Plots
         private void InteractWithRandomPlot()
         {
             IReadOnlyList<Plot> interactablePlots;
-            interactablePlots = plots.FindAll(plot => plot.State is PlotState.ReadyToHarvest);
+            interactablePlots = plots.FindAll(plot => plot.CropState is CropState.ReadyToHarvest);
 
             if (interactablePlots.Count == 0)
                 return;

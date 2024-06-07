@@ -11,7 +11,7 @@ namespace JG.FG.Plots
     public class Plot : MonoBehaviour, IInteractable
     {
         [BoxGroup("Runtime")]
-        [SerializeField] private PlotState state;
+        [SerializeField] private CropState cropState;
 
         [BoxGroup("Reference")]
         [SerializeField] private CropSO crop;
@@ -23,7 +23,7 @@ namespace JG.FG.Plots
 
         private float growthTimer;
 
-        public PlotState State { get => state; set => state = value; }
+        public CropState CropState { get => cropState; set => cropState = value; }
 
         private void Start()
         {
@@ -44,7 +44,7 @@ namespace JG.FG.Plots
 
         private void Initialize()
         {
-            state = PlotState.Growing;
+            cropState = CropState.Growing;
             growthTimer = 0;
 
             UpdateTempText();
@@ -55,13 +55,13 @@ namespace JG.FG.Plots
             if (crop == null)
                 return;
 
-            if (state is not PlotState.Growing)
+            if (cropState is not CropState.Growing)
                 return;
 
             growthTimer += Time.deltaTime;
             if (growthTimer >= crop.GrowthTime)
             {
-                state = PlotState.ReadyToHarvest;
+                cropState = CropState.ReadyToHarvest;
                 growthTimer = 0;
             }
         }
@@ -71,28 +71,28 @@ namespace JG.FG.Plots
             if (crop == null)
                 return;
 
-            if (state is not PlotState.ReadyToHarvest)
+            if (cropState is not CropState.ReadyToHarvest)
                 return;
 
-            state = PlotState.Growing;
+            cropState = CropState.Growing;
 
             gold.Add(crop.GoldWorth);
         }
 
         private void UpdateTempText()
         {
-            string colorFormaterStart = state switch
+            string colorFormaterStart = cropState switch
             {
-                PlotState.Growing => "<color=yellow>",
-                PlotState.ReadyToHarvest => "<color=green>",
+                CropState.Growing => "<color=yellow>",
+                CropState.ReadyToHarvest => "<color=green>",
                 _ => "<color=red>"
             };
             string colorFormaterEnd = "</color>";
 
-            string stateFormated = state switch
+            string stateFormated = cropState switch
             {
-                PlotState.Growing => "Growing",
-                PlotState.ReadyToHarvest => "Ready",
+                CropState.Growing => "Growing",
+                CropState.ReadyToHarvest => "Ready",
                 _ => "None"
             };
 
