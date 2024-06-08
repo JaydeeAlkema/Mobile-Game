@@ -1,0 +1,16 @@
+{
+    "name": "JG.FG.StateMachines",
+    "rootNamespace": "JG.FG.StateMachines",
+    "references": [
+        "GUID:b6e651231a9b3484cb96e4cc3fabc5ba"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

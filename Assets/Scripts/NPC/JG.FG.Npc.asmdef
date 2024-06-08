@@ -1,0 +1,19 @@
+{
+    "name": "JG.FG.Npc",
+    "rootNamespace": "JG.FG.Npc",
+    "references": [
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:b6e651231a9b3484cb96e4cc3fabc5ba",
+        "GUID:b9937ae58ac79854c89def773efbf82f",
+        "GUID:a9d347edd5e3af846a5b9233dfc4efc5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
