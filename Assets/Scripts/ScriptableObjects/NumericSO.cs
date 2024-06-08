@@ -29,6 +29,11 @@ namespace JG.FG.ScriptableObjects
             UnityEditor.EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
         }
 
+        private void OnValidate()
+        {
+            OnValueChanged?.Invoke();
+        }
+
         private void OnPlayModeStateChanged(UnityEditor.PlayModeStateChange state)
         {
             // Reset the value to the cached initial value when exiting play mode
