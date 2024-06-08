@@ -55,16 +55,18 @@ namespace JG.FG.Plots
 
         private void OnInteract()
         {
-            if (HasEnoughGold() is false)
+            bool hasEnoughGold = HasEnoughGold();
+            if (hasEnoughGold is false)
             {
                 // Implement some user feedback to display they need more gold to buy these plots...
+
                 if (Debug.isDebugBuild)
-                    Debug.Log($"#Plot Buyer# Not enough gold to buy these plots {string.Join(',', plotsToBuy)}", this);
+                    Debug.Log($"#Plot Buyer# Not enough gold to buy these plots:\n {string.Join(',', plotsToBuy)}");
 
                 return;
             }
 
-            plotsToBuy.ForEach(plot => plot.gameObject.SetActive(true));
+            plotsToBuy.ForEach(plot => plot.enabled = true);
 
             int finalCost = CalculateFinalCost();
             playerGoldAmount.Subtract(finalCost);

@@ -11,15 +11,19 @@ namespace JG.FG.Plots
     public class Plot : MonoBehaviour, IInteractable
     {
         [BoxGroup("Runtime")]
-        [SerializeField] private CropState cropState;
+        [SerializeField] private CropState cropState = default;
 
-        [BoxGroup("Reference")]
-        [SerializeField] private CropSO crop;
-        [BoxGroup("Reference")]
-        [SerializeField] private IntSO gold;
+        [BoxGroup("Data")]
+        [SerializeField] private CropSO crop = default;
+        [BoxGroup("Data")]
+        [SerializeField] private IntSO gold = default;
+
+        [BoxGroup("References")]
+        [SerializeField] private Collider2D collider = default;
+
 
         [BoxGroup("--- TEMP ---")]
-        [SerializeField] private TextMeshPro tempText;
+        [SerializeField] private TextMeshPro tempText = default;
 
         private float growthTimer;
 
@@ -47,6 +51,7 @@ namespace JG.FG.Plots
             cropState = CropState.Growing;
             growthTimer = 0;
 
+            collider.enabled = true;
             tempText.gameObject.SetActive(true);
             UpdateTempText();
         }

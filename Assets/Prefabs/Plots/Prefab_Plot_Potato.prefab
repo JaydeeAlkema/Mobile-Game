@@ -340,7 +340,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7641561132504348900}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7641561132504348900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6799ab9d0c7e5a04a911d4467a39555f, type: 3}
   m_Name: 
@@ -394,6 +394,7 @@ MonoBehaviour:
   cropState: 0
   crop: {fileID: 11400000, guid: e798dfb9373b05541bd2886df3a82710, type: 2}
   gold: {fileID: 11400000, guid: 885df19db0201564db84a10efa0c12da, type: 2}
+  collider2D: {fileID: 552001908600585137}
   tempText: {fileID: 7506342811163658769}
 --- !u!1 &8336355764442249527
 GameObject:
