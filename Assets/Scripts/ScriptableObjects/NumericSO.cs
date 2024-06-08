@@ -36,6 +36,10 @@ namespace JG.FG.ScriptableObjects
                 Value = initialValue;
         }
 #endif
+        public void Set(T value)
+        {
+            Value = value;
+        }
 
         public virtual void Add(T value)
         {
