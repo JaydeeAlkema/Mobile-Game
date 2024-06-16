@@ -21,7 +21,6 @@ namespace JG.FG.Plots
         [BoxGroup("References")]
         [SerializeField] private Collider2D collider = default;
 
-
         [BoxGroup("--- TEMP ---")]
         [SerializeField] private TextMeshPro tempText = default;
 
@@ -109,6 +108,5 @@ namespace JG.FG.Plots
 
             tempText.text = sb.ToString();
         }
-
     }
 }
