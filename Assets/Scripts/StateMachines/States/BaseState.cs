@@ -1,21 +1,12 @@
-﻿using JG.FG.Interfaces;
-
-namespace JG.FG.StateMachines
+﻿namespace JG.FG.StateMachines
 {
-    public abstract class BaseState : IState<BaseState>
+    public abstract class BaseState
     {
         public bool stateIsFinished = false;
-        public abstract BaseState NextState { get; }
+        public virtual BaseState NextState { get; }
 
-        public abstract void Enter();
-        public abstract void Update();
-        public abstract void Exit();
-        public virtual BaseState GetNextState()
-        {
-            if (stateIsFinished is false)
-                return this;
-
-            return NextState;
-        }
+        public virtual void Enter() { }
+        public virtual void Update() { }
+        public virtual void Exit() { }
     }
 }

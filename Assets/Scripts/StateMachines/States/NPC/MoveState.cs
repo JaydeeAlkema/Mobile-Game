@@ -6,20 +6,12 @@
 
         public override BaseState NextState => new IdleState();
 
-        public override void Enter()
-        {
-        }
-
         public override void Update()
         {
             counter--;
 
             if (counter <= 0)
                 stateIsFinished = true;
-        }
-
-        public override void Exit()
-        {
         }
     }
 }

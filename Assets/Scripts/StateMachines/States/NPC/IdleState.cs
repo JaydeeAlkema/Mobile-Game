@@ -6,20 +6,12 @@ namespace JG.FG.StateMachines
 
         public override BaseState NextState => new MoveState();
 
-        public override void Enter()
-        {
-        }
-
         public override void Update()
         {
             counter--;
 
             if (counter <= 0)
                 stateIsFinished = true;
-        }
-
-        public override void Exit()
-        {
         }
     }
 }

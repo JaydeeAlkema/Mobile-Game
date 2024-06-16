@@ -23,8 +23,11 @@
 
         public void ChangeState(BaseState newState)
         {
-            previousState = currentState;
-            currentState?.Exit();
+            if (currentState is not null)
+            {
+                currentState.Exit();
+                previousState = currentState;
+            }
 
             currentState = newState;
             currentState.Enter();
