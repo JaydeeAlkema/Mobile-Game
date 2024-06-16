@@ -394,7 +394,7 @@ MonoBehaviour:
   cropState: 0
   crop: {fileID: 11400000, guid: e798dfb9373b05541bd2886df3a82710, type: 2}
   gold: {fileID: 11400000, guid: 885df19db0201564db84a10efa0c12da, type: 2}
-  collider2D: {fileID: 552001908600585137}
+  collider: {fileID: 552001908600585137}
   tempText: {fileID: 7506342811163658769}
 --- !u!1 &8336355764442249527
 GameObject:

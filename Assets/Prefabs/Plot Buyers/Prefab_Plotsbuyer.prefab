@@ -272,8 +272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plotsToBuy: []
   buyCostText: {fileID: 2345016147335491690}
-  enoughGoldColor: {r: 0.21791564, g: 0.7830189, b: 0.48566368, a: 0}
-  notEnoughGoldColor: {r: 0.8584906, g: 0.31070817, b: 0.23082057, a: 0}
+  enoughGoldColor: {r: 0.21791564, g: 0.7830189, b: 0.48566368, a: 1}
+  notEnoughGoldColor: {r: 0.8584906, g: 0.31070817, b: 0.23082057, a: 1}
   playerGoldAmount: {fileID: 11400000, guid: 885df19db0201564db84a10efa0c12da, type: 2}
   baseBuyCost: {fileID: 11400000, guid: 8ffa56ecf0e5f804db336e89843a51a0, type: 2}
   boughtPlotsMultiplier: {fileID: 11400000, guid: 487fc15ac73d6df49aaa77b42e0496bf, type: 2}
